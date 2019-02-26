@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background: deeppink;
+        }
+    </style>
+</head>
+<body>
+<div id="pursh"></div>
+</body>
+<script type="text/javascript">
+    window.onload = function () {
+        var pursh = document.getElementById('box');
+        var purshLeft=pursh.offsetLeft;
+        var purshTop=pursh.offsetTop;
+
+        setInterval(function () {
+            deg++;
+            pursh.style.left=purshLeft+(deg*Math.PI/180)+'px';
+            pursh.style.top=purshTop-Math.sin(deg*Math.PI/180)+'px';
+
+
+
+        })
+
+
+    }
+</script>
+</html>
